@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<h1>SECCION INICIAR SESION</h1>
+
+
+<script>
+
+    function saltarLinea() {
+
+    document.write("<br>");	
+    document.write("<br>");	
+    document.write("<br>");	
+
+    }  
+
+    function imprimir(frase) {
+
+    document.write(frase);
+    saltarLinea();
+
+}
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+    var intentos = 1;
+    var max_intentos = 3;
+
+    while(intentos <= max_intentos){
+
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        imprimir("Pagina de inicio de Alura Latam");
+        break;
+    } else {
+        alert("inicio de sesión inválido. Favor intente de nuevo");
+        imprimir("Error numero " + intentos + " al tratar de iniciar. Intente nuevamente");
+    }
+
+    intentos++;
+
+    }
+
+</script>

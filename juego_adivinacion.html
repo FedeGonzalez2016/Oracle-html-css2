@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA ADIVINA NUMERO</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+	
+    // JUEGO EN EL CUAL DE FORMA ALEATORIA ELEGIRA UN NUMERO DEL 1 AL 10, Y A TRAVES DE UN MENSAJE LE PEDIREMOS AL USUARIO QUE INGRESE UN NUMERO.
+    //LUEGO LE DIREMOS AL USUARIO SI ACERTÓ O ERRÓ
+
+    var random_num = Math.round(Math.random() * 10);
+    console.log(random_num); 
+    var user_num =parseInt(prompt("Bienvenido al programa. Ingrese un numero del 1 al 10 por favor"));
+
+    if (random_num  == user_num){
+        imprimir("Ha adivinado el numero");
+    }else
+    {
+        imprimir("Ha fallado al tratar de adivinar");
+        if (random_num > user_num){
+            imprimir ("El numero era mayor al ingresado");
+        }
+        if (random_num < user_num){
+            imprimir ("El numero era menor al ingresado");
+        }
+    }
+</script>
+

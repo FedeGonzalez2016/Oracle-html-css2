@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA LICENCIA DE CONDUCIR</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    //CONDICIONES PARA QUE LA PERSONA PUEDA CONDUCIR VEHICULO= QUE TENGA 18 O MAS AÑOS DE EDAD Y QUE TENGA LICENCIA DE CONDUCIR
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde si o no");
+
+    if (edad >= 18 && tieneLicencia == "si"){
+        imprimir("Esta autorizado a manejar vehiculo");
+    }else
+    {
+        imprimir("No esta autorizado a manejar vehiculo, ya que no posee los requisitos necesarios");
+    }
+
+</script>

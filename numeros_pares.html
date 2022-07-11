@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA IMPRESION DE NUMEROS PARES</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+	
+    // CREAR PROGRAMA QUE IMPRIMA LOS NUMEROS PARES DEL 1 AL 100 Y AL FINAL DE TODO ESCRIBIR LA PALABRA "FIN"
+
+    var limite = 100;
+    var contador = 2;
+
+    while (contador <= limite) {
+
+        imprimir(contador);
+        contador+=2;
+
+    }
+   
+    imprimir("FIN");
+
+</script>

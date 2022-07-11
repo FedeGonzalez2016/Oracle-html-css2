@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA ADIVINA NUMERO 2.0 (MEJORADO)</h1>
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+	
+    // JUEGO EN EL CUAL DE FORMA ALEATORIA ELEGIRA UN NUMERO DEL 1 AL 10, Y A TRAVES DE UN MENSAJE LE PEDIREMOS AL USUARIO QUE INGRESE UN NUMERO.
+    //LUEGO LE DIREMOS AL USUARIO SI ACERTÓ O ERRÓ, TENDRA 3 CHANCES DE GANAR.
+    //SI PIERDE, LE DIREMOS EL NUMERO QUE ERA.
+
+    var random_num = Math.round(Math.random() * 10); // GENERO EL NUMERO RANDOM
+
+    console.log(random_num); // MUESTRO EN CONSOLA PARA ORGANIZARME
+
+    var intentos = 1; // INTENTOS REALIZADOS
+    var limite_intentos = 3; // INTENTOS LIMITE
+    
+    while (intentos <= limite_intentos){ 
+        
+        var user_num =parseInt(prompt("Bienvenido al programa. Ingrese un numero del 1 al 10 por favor"));
+
+        if (random_num  == user_num){
+
+        alert("Ha adivinado el numero");
+
+        break;
+
+        }else
+        {
+
+        alert("Ha fallado al tratar de adivinar");
+
+        }
+        intentos++;
+    }
+
+        if (random_num  == user_num){
+
+        imprimir ("Usted adivino en el intento " + intentos + " El numero aleatorio era " + random_num);
+
+
+        }else
+        {
+
+        imprimir ("Ha fallado al tratar de adivinar, el numero aleatorio era " + random_num);
+
+        }
+
+
+
+</script>
+

@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA LOTERIA</h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function sortea(n) {
+        var random_num = Math.round(Math.random() * n);
+        return random_num
+        saltarLinea();
+    }
+
+    // EJERCICIO DE LOTERIA, CONDICIONES DE APROBACION:
+    /*
+    1 – Crea una función de lotería que reciba un número n y sortee un número entre 0 a n, retornando ese valor. De esta forma, en vez de escribir var numeroPensado = Math.round(Math.random()*n);, escribirás var numeroPensado = sortea(n);. Realiza esa modificación, creando una nueva función y utilízala de forma correcta.
+    */
+   
+
+    var new_num = sortea(10);
+    console.log(new_num);
+    var user_num =parseInt(prompt("Bienvenido al programa. Ingrese un numero del 1 al 10 por favor"));
+
+    if (new_num  == user_num){
+        imprimir("Ha adivinado el numero");
+    }else
+    {
+        imprimir("Ha fallado al tratar de adivinar");
+        if (new_num > user_num){
+            imprimir ("El numero era mayor al ingresado");
+        }
+        if (new_num < user_num){
+            imprimir ("El numero era menor al ingresado");
+        }
+    }
+    
+    
+</script>
